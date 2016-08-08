@@ -33,14 +33,12 @@
 	// ============================
 	
 	Inputprefix.prototype.setCurrentInfos = function ($target) {
-		console.log($target);
 		this.prefix = $target.data("prefix");
 		this.prefixLen = this.prefix.length;
 		this.cursorStart = $target.get(0).selectionStart;
 		this.cursorEnd = $target.get(0).selectionEnd;
 		this.currentValue = $target.val();
 		this.currentValueLen = this.currentValue.length;
-		console.log("Prefix:"+this.prefix+"("+this.prefixLen+") | Value:"+this.currentValue+"("+this.currentValueLen+") | Cursor:"+this.cursorStart+":"+this.cursorEnd);
 	}
 	
 	Inputprefix.prototype.setTargetSelection = function ($target, value) {
