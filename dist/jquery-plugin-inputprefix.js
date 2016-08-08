@@ -1,8 +1,8 @@
 /*!
  * Input Prefix plugin for jQuery, by Grégoire Fruleux
  * Copyright 2016 Salto Consulting
- * Licensed under http://opensource.org/licenses/MIT
- *
+ * Licensed under https://opensource.org/licenses/GPL-3.0
+ * Source https://github.com/gfruleux/jquery-plugin-input-prefix
  */
 
 +function ($) {
