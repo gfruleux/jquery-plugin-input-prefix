@@ -4,7 +4,7 @@ jQuery plugin for input with prefix text
 <h1>Install: use the data "data-prefix" with your inputs</h1>
 <h1>Dependancy: jQuery 2.X</h1>
 <h2>Exemple:
-```html
+```
 	<input type="text" id="foo" name="bar" data-prefix="prefix" />
 ```
 </h2>
