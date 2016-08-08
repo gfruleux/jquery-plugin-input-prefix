@@ -24,7 +24,7 @@
 		this.$element.val(this.prefix);
 		
 		this.$element.on("keydown", $.proxy(this.preInputDataPrefixKeydown, this));
-		this.$element.on("input", $.proxy(this.inputDataPrefixChange, this));
+		this.$element.on("input", $.proxy(this.preInputDataPrefixChange, this));
 	}
 	
 	Inputprefix.version = "0.0.1";
@@ -39,6 +39,9 @@
 		this.cursorEnd = $target.get(0).selectionEnd;
 		this.currentValue = $target.val();
 		this.currentValueLen = this.currentValue.length;
+		
+		if (this.currentValueLen === undefined || this.currentValueLen === 0)
+			$target.val(this.prefix);
 	}
 	
 	Inputprefix.prototype.setTargetSelection = function ($target, value) {
@@ -47,9 +50,9 @@
 	
 	// INPUTPREFIX KEYDOWN PREPROCESSOR-FUNCTION
 	// =========================================
-	
 	Inputprefix.prototype.preInputDataPrefixKeydown = function (event) {
 		var keyCode = event.which;
+		this.setCurrentInfos(this.$element);
 		if (keyCode === 8 || keyCode === 46) {
 			event.preventDefault();
 			this.inputDataPrefixKeydown(event);
@@ -58,13 +61,10 @@
 	
 	// INPUTPREFIX KEYDOWN FUNCTION
 	// ============================
-	
 	Inputprefix.prototype.inputDataPrefixKeydown = function (event) {
 		var self = this;
 		var keyCode = event.which;
-		
-		self.setCurrentInfos(self.$element);
-			
+					
 		if (keyCode === 8) {
 			if (self.cursorEnd <= self.prefixLen)
 				return;
@@ -80,16 +80,20 @@
 			self.setTargetSelection(self.$element, self.cursorEnd);
 		}
 	}
+	
+	// INPUTPREFIX CHANGE PRE-FUNCTION
+	// ===============================
+	Inputprefix.prototype.preInputDataPrefixChange = function (event) {
+		this.setCurrentInfos(this.$element);
+		this.inputDataPrefixChange(event);
+	};
 
 	// INPUTPREFIX CHANGE FUNCTION
 	// ===========================
-	
 	Inputprefix.prototype.inputDataPrefixChange = function (event) {
 		var self = this;
 		var keyCode = event.which;
-		
-		self.setCurrentInfos(self.$element);
-		
+				
 		if (self.currentValue === undefined || self.currentValue < self.prefixLen || self.currentValue.slice(0, self.prefixLen) !== self.prefix) {
 			self.$element.val(self.prefix);
 		}
