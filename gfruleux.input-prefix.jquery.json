@@ -1,5 +1,5 @@
 { 
-    "name": "gfruleux.jquery-plugin-input-prefix", 
+    "name": "jquery-plugin-input-prefix", 
     "title": "jQuery Input Prefix", 
     "description": "This jQuery plugin allows you to set a fixed prefix value inside an html input tag.", 
     "keywords": [ 
