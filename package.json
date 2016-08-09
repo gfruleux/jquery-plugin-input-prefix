@@ -1,0 +1,24 @@
+{
+  "name": "gfruleux.jquery-plugin-input-prefix",
+  "version": "1.0.0",
+  "description": "This jQuery plugin allows you to set a fixed prefix value inside an html input tag.",
+  "main" : "./dist/jquery-plugin-input-prefix.js",
+  "homepage": "https://github.com/gfruleux/jquery-plugin-input-prefix#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gfruleux/jquery-plugin-input-prefix.git"
+  },
+  "keywords": [
+    "jQuery",
+    "plugin",
+	"jquery-plugin",
+    "input",
+    "prefix",
+    "fix value"
+  ],
+  "author": "Gregoire Fruleux <gregoire.fruleux.pro@gmail.com>",
+  "license": "GPL 3.0",
+  "bugs": {
+    "url": "https://github.com/gfruleux/jquery-plugin-input-prefix/issues"
+  }
+}
