@@ -1,0 +1,6 @@
+{
+  "name": "Jquery-plugin-input-prefix",
+  "tagline": "jQuery plugin for input with prefix text",
+  "body": "# jquery-plugin-input-prefix\r\njQuery plugin for input with prefix text\r\n\r\n<h1>Install: use the data \"data-prefix\" with your inputs</h1>\r\n<h1>Minimal requirements: jQuery 2.X</h1>\r\n<h2>Exemple:</h2>\r\n```\r\n\t<input type=\"text\" id=\"foo\" name=\"bar\" data-prefix=\"prefix\" />\r\n```\r\n\r\n\r\nThis plugin allows you to set a fix value as a prefix inside an input. No more \"magic tricks\" with span and styling !\r\n<br />\r\nThe value is not erased and then rewrited, the plugin prevent to delete letters from the prefix :)\r\n\r\n<h2><a href=\"https://jsfiddle.net/97vuzwba/30/\">JSFiddle Demo!</a></h2>",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
